@@ -46,11 +46,17 @@ VLA models extend the idea further: instead of conditioning only on images and j
 
 ---
 
+### Further Reading
+
+- [LeRobot: A Community-Driven Robotics Framework (official paper)](https://arxiv.org/pdf/2510.12403) — deep dive into datasets, policies, and training
+- [Modern AI Robotics from First Principles](https://interlatent.com/blog/interlatent-modern-ai-robotics-first-principles) — conceptual foundation for understanding learning-based robot control
+- [Do As I Do — imitation learning project](https://do-as-i-do.com) · [GitHub](https://github.com/malik-group/do-as-i-do) — a worked example of robot imitation learning, useful for understanding the full pipeline end-to-end
+
+---
+
 ### This Guide
 
 The rest of this document covers the technical setup: installing LeRobot, calibrating the arms, recording a dataset, and launching training on the shared GPU workstation. Follow the steps in order.
-
-For a deeper understanding of the LeRobot framework — datasets, policies, and training — refer to the official paper: [LeRobot: A Community-Driven Robotics Framework (arXiv)](https://arxiv.org/pdf/2510.12403).
 
 ---
 
@@ -214,6 +220,9 @@ lerobot-calibrate \
 ```
 
 Apply the same neutral-pose and full-range-sweep steps as above.
+
+> **IMPORTANT — Do not touch the setup after calibration is complete.**
+> Once a team has finished calibration, the physical environment (camera position, robot placement, object positions, lighting) must remain exactly as it is. Imitation learning is highly sensitive to environmental consistency — if the camera shifts even slightly, or objects are moved between sessions, the trained model will fail to generalize and the entire dataset becomes unreliable. If you need to adjust anything, inform an organizer first. This applies to all teams sharing the robot.
 
 ---
 
