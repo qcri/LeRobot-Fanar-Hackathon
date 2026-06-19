@@ -51,6 +51,7 @@ VLA models extend the idea further: instead of conditioning only on images and j
 - [LeRobot: A Community-Driven Robotics Framework (official paper)](https://arxiv.org/pdf/2510.12403) — deep dive into datasets, policies, and training
 - [Modern AI Robotics from First Principles](https://interlatent.com/blog/interlatent-modern-ai-robotics-first-principles) — conceptual foundation for understanding learning-based robot control
 - [Do As I Do — imitation learning project](https://do-as-i-do.com) · [GitHub](https://github.com/malik-group/do-as-i-do) — a worked example of robot imitation learning, useful for understanding the full pipeline end-to-end
+- [VLA SOTA](https://arxiv.org/pdf/2511.14759)
 
 ---
 
